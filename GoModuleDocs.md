@@ -8,12 +8,12 @@ Go 의존성을 관리하는 시스템으로써 Go Modules system 에 대해 알
 
 go.mod 파일이 있는 폴더가 module 의 루트 폴더이고, main 모듈은 go 명령어로부터 호출되어진 폴더를 포함하는 모듈입니다.
 
-아래 레포지토리 구성과 같이 세팅이 되어야 keyboard pkg 를 가져와서 사용할 수 있었다.
-https://github.com/jooyg62/keyboard
+처음 go.mod 파일을 생성하여줄때, 내가 다운받으려는 패키지(github.com/jooyg62/keyboard)로 명명하여 패키지가 다운로드(go get) 되지 않는 이슈가 있었다.
 
--- go.mod 파일 초기화
-go mod init github.com/jooyg62/keyboard
+# go.mod 파일 초기화
+go mod init {my module name}
 
--- 모듈 다운로드
+# pkg 다운로드
 go get github.com/jooyg62/keyboard
+...
 
