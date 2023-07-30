@@ -25,7 +25,7 @@ go get github.com/jooyg62/keyboard
 go.mod 파일내 의존성 패키지가 추가된 내용을 확인하실 수 있습니다.
 
 삽질 1) 처음 go.mod 파일을 생성할때, 내가 다운받으려는 모듈명(`github.com/jooyg62/keyboard`)으로 명명하여 패키지가 다운로드(`go get`) 되지 않는 이슈가 있었다.
-그래서, 아래와 같이 무한 사이클로 모듈이 import 된다는 error 을 받았던 것이였다..
+아마 자기 자신의 패키지를 참조하기 때문인 이유인 것 같고, 아래와 같이 무한 사이클로 모듈이 import 된다는 error 을 받았던 것이였다..
 ```
 package command-line-arguments
         imports github.com/jooyg62/keyboard/detail
