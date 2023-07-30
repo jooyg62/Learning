@@ -34,5 +34,13 @@ package command-line-arguments
 
 삽질 2) GOPATH 를 다른 곳에 지정해두어서 모듈을 다운로드(`go get`) 받을 때 다른 경로에 파일이 생성되었었다..
 
+# pkg 업데이트
+패키지의 main 브랜치가 엄데이트된 경우 아래와 같이 @main 을 뒤에 붙여주면 최신 main 브랜치로 패키지를 가져올 수 있습니다.
+go get github.com/jooyg62/keyboard@main
+
+# go doc 문서화
+package 구문과 각 함수 바로 위에 주석을 추가하여, 간편하게 문서화 할 수 있는 기능을 사용하였습니다.
+편리한 문서화를 통해 손쉽게 협업 및 패키지 사용을 용이하게 한 점이 인상깊었습니다.
+
 
 
